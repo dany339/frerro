@@ -1,0 +1,680 @@
+@charset 'utf-8';
+
+.main-visual {
+    aspect-ratio: 1/0.3489583;
+    background: url(../img/visual-img.jpg) no-repeat 40% 100% / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.main-visual::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black50);
+}
+
+.visual-title {
+    text-align: center;
+    z-index: 1;
+}
+
+.visual-title h2 {
+    font-weight: 700;
+    font-size: clamp(3.6rem, 3.5417vw, 6.8rem);
+    color: var(--white100);
+    word-break: keep-all;
+    padding: 0 2rem;
+}
+.visual-title p {
+    font-size: clamp(1.9rem, 1.6667vw, 3.2rem);
+    color: var(--white80);
+    margin-top: 1.2rem;
+}
+
+.btn-cta {
+    font-weight: 700;
+    font-size: 2.2rem;
+    font-size: clamp(1.4rem, 1.1458vw, 2.2rem);
+    color: var(--main-color);
+
+    width: 12.5vw;
+    min-width: 16rem;
+    aspect-ratio: 1/0.2583333333333333;
+    background: var(--sub-color);
+    border-radius: 5px;
+    margin-top: 3.8rem;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-list {
+    display: flex;
+    gap: 2rem;
+    padding: 3.4375vw 0;
+}
+
+.product-list li {
+    /* border: 1px solid #000; */
+    width: 23.86363636363636%;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.product-list li:hover {
+    transform: translateY(-10%);
+}
+
+.product-list li:hover figure img {
+    scale: 120%;
+}
+
+.product-list li figure {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 1rem;
+    /* border: 1px solid red; */
+    margin-bottom: 2.2rem;
+    position: relative;
+}
+
+.product-list li strong {
+    font-weight: 600;
+    font-size: 2.6rem;
+    font-size: clamp(1.9rem, 1.3542vw, 2.6rem);
+    color: var(--main-color);
+}
+
+.benefit-txt {
+    padding: 0 9.5455%;
+    text-align: center;
+}
+
+.benefit-txt p {
+    font-weight: 500;
+    font-size: 2.8rem;
+    font-size: clamp(1.8rem, 1.4583vw, 2.8rem);
+    color: var(--text-color);
+    margin-top: 2.6rem;
+}
+
+.tab-menu {
+    margin-top: 5.2083vw;
+    display: flex;
+    justify-content: center;
+    gap: 2.4242%;
+}
+
+.tab-menu a {
+    font-weight: 700;
+    font-size: 1.9rem;
+    color: var(--main-color);
+    padding: 1.1458% 4.5455%;
+    border: 2px solid var(--main-color);
+    border-radius: 0.5rem;
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab-menu a.active {
+    color: #fff;
+    background: var(--main-color);
+}
+
+.tab-content {
+    margin-top: 5rem;
+}
+
+.event-list {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+}
+
+.event-list li {
+    max-width: 42.9rem;
+    min-width: 33.3rem;
+    width: 32.5%;
+    aspect-ratio: 1/1.384615384615385;
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+    flex-shrink: 0; /* 줄어들지 마. */
+    box-shadow: var(--shadow);
+}
+
+.event-list li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--black50);
+}
+
+.event-list li figure {
+    width: 100%;
+    height: 100%;
+}
+
+.event {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 6.7454% 6.7454%;
+    /* border: 1px solid #000; */
+}
+
+.event strong {
+    font-weight: 700;
+    font-size: 3rem;
+    font-size: clamp(2.3rem, 1.5625vw, 3rem);
+    color: var(--white80);
+}
+
+.event h4 {
+    margin-top: 4rem;
+    margin-top: 6.745362563237774%;
+    font-weight: 700;
+    font-size: 4rem;
+    font-size: clamp(3rem, 2.0833vw, 4rem);
+    word-break: keep-all;
+    color: var(--white100);
+    /* min-height: 18rem; */
+    min-height: 30.958%;
+}
+
+.event h4 b {
+    color: var(--sub-color);
+}
+
+.event p {
+    /* margin-top: 3rem; */
+    margin-top: 6.993%;
+    color: var(--white60);
+    font-size: clamp(1.5rem, 1.0417vw, 2rem);
+}
+
+.event .hashtag {
+    font-weight: 500;
+    font-size: 2.2rem;
+    font-size: clamp(1.7rem, 1.1458vw, 2.2rem);
+    color: var(--sub-color);
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5rem;
+}
+
+.brand {
+    background: var(--bg-color);
+    padding: 8.3333vw 0;
+    margin-top: 8.3333vw;
+}
+
+.brand .sec-title {
+    margin-top: 0;
+}
+
+.brand-list {
+    display: flex;
+    gap: 1.5152%;
+    margin-top: 5.9rem;
+    width: 100%;
+    aspect-ratio: 1/0.347;
+}
+
+.brand-list li {
+    width: 15.3788%;
+    aspect-ratio: 1/0.704;
+    position: relative;
+    color: var(--white100);
+    background: no-repeat 0 0 / cover;
+    border-radius: 10px;
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+.brand-list li.active {
+    width: 49.4%;
+}
+
+.brand-list li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--black50);
+}
+
+.brand-list li:nth-child(1) {
+    background-image: url(../img/brand-img1.jpg);
+}
+.brand-list li:nth-child(2) {
+    background-image: url(../img/brand-img2.jpg);
+}
+.brand-list li:nth-child(3) {
+    background-image: url(../img/brand-img3.jpg);
+}
+.brand-list li:nth-child(4) {
+    background-image: url(../img/brand-img4.jpg);
+}
+
+.brand-list li > div {
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    left: 7rem;
+    width: 320px;
+    width: 53%;
+
+    /* background: #f00; */
+
+    opacity: 0;
+}
+
+.brand-list li.active > div {
+    opacity: 1;
+    left: 8.589%;
+    transition: 0.4s 0.2s;
+}
+
+.brand-list li strong {
+    opacity: 1;
+    font-weight: 600;
+    font-size: 2rem;
+    font-size: clamp(1.3rem, 1.0417vw, 2rem);
+    position: absolute;
+    bottom: 1.0417vw;
+    left: 1.25vw;
+    transition: 0.2s;
+}
+
+.brand-list li.active strong {
+    opacity: 0;
+    bottom: -2rem;
+}
+
+.brand-list li dl dt {
+    font-weight: 700;
+    font-size: 3.2rem;
+    font-size: clamp(2.2rem, 1.6667vw, 3.2rem);
+}
+
+.brand-list li dl dd {
+    /* min-height: 18.1rem; */
+    margin-top: 2.4rem;
+    margin-top: 3.5276%;
+    font-size: 2.3rem;
+    font-size: clamp(1.6rem, 1.198vw, 2.3rem);
+    color: var(--white60);
+
+    display: block; /* 인터넷 익스플로러 호환 */
+    display: -webkit-box;
+    overflow: hidden;
+    line-height: 1.5;
+    max-height: 5.4em; /* 인터넷 익스플로러 호환 */
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.btn-more {
+    font-weight: 700;
+    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 0.8333vw, 1.6rem);
+    color: var(--main-color);
+    background: var(--sub-color);
+    width: 70%;
+    /* width: 21.5rem; */
+    aspect-ratio: 1/0.256;
+    margin-top: 11.6564%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.btn-more::after {
+    content: "";
+    width: 0.8rem;
+    height: 1.5rem;
+    background: url(../img/ico-arrow.svg) no-repeat 0 0;
+    transition: all ease 0.3s;
+    display: none;
+}
+
+.btn-more:hover::after {
+    display: flex;
+}
+
+.review-more {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.8rem;
+
+    font-weight: 600;
+    font-size: 2rem;
+    font-size: clamp(1.4rem, 1.0417vw, 2rem);
+    color: var(--main-color);
+}
+
+.review-more::after {
+    content: "";
+    display: block;
+    width: 0.8rem;
+    height: 1.9rem;
+    background: url(../img/ico-arrow.svg) no-repeat 50%;
+}
+
+.review-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-list li {
+    width: 23.8636%;
+    aspect-ratio: 1/1.37778;
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-top: 3.8rem;
+}
+
+.review-list li figure {
+    aspect-ratio: 1/0.9;
+    overflow: hidden;
+}
+
+.review-list li:hover figure img {
+    scale: 120%;
+}
+
+.review-con {
+    /* padding: 2.1rem 2.5rem; */
+    padding: 6.6879% 5.7604%;
+}
+
+.review-con div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-con div img {
+    width: 42.6415%;
+    /* height: 2.1rem; */
+    aspect-ratio: 1/0.1858;
+}
+
+.review-con strong {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--black30);
+}
+
+.review-con p {
+    margin-top: 5.0794%;
+    /* margin-top: 5.0794%; */
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 0.7813vw, 1.5rem);
+    line-height: 1.4;
+    color: var(--text-color);
+}
+
+@media (max-width: 1200px) {
+    nav {
+        margin: 0 8.7890625%;
+        height: 7.6rem;
+    }
+
+    .review-con p {
+        display: block; /* 인터넷 익스플로러 호환 */
+        display: -webkit-box;
+        overflow: hidden;
+        line-height: 1.7;
+        max-height: 3.4em; /* 인터넷 익스플로러 호환 */
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 1050px) {
+    .brand {
+        margin-top: 17.8rem;
+    }
+
+    .brand-list {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .brand-list li.active {
+        width: 100%;
+        aspect-ratio: 1/0.6;
+    }
+
+    .brand-list li {
+        width: 100%;
+        aspect-ratio: 1/0.1;
+    }
+
+    .brand-list li > div {
+        width: 75%;
+    }
+
+    .brand-list li strong {
+        bottom: 1.6512vw;
+        left: 2.5814vw;
+        font-size: 2rem;
+    }
+
+    .brand-list li dl dt {
+        font-size: 2.8rem;
+    }
+
+    .brand-list li dl dd {
+        font-size: 2rem;
+    }
+
+    .btn-more {
+        width: 45%;
+        max-width: 21.5rem;
+    }
+
+    .review-list {
+        flex-direction: column;
+    }
+
+    .review-list li {
+        width: 100%;
+        aspect-ratio: 1/0.3;
+
+        padding: 2rem;
+        padding: 5.1282%;
+        position: relative;
+    }
+
+    .review-con {
+        padding: 0;
+    }
+
+    .review-list li figure {
+        width: 16.6667%;
+        aspect-ratio: 1/1;
+        position: absolute;
+        right: 5.1282%;
+        top: 40%;
+        top: 34%;
+    }
+
+    .review-con div img {
+        width: 8.6rem;
+    }
+
+    .review-con p {
+        margin-top: 3%;
+        font-size: 1.7rem;
+        font-size: clamp(1.7rem, 2.3288vw, 2rem);
+        /* padding: 0 10.5rem 0 0; */
+        padding: 0 26.9231% 0 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .sec-title {
+        margin-top: 10rem;
+        font-size: 2.8rem;
+        word-break: keep-all;
+    }
+
+    nav {
+        margin: 0;
+        padding: 4.6512vw;
+        width: 100vw;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .logo a {
+        background-image: url(../img/logo-mobile.svg);
+    }
+
+    .btn-search {
+        display: block;
+        background-image: url(../img/btn-search-w.svg);
+    }
+
+    .btn-menu {
+        background-image: url(../img/btn-menu-w.svg);
+        display: block;
+    }
+
+    .main-visual {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .visual-title h2 {
+        font-size: 4.8rem;
+    }
+    .visual-title p {
+        padding: 4.6512vw;
+    }
+
+    .btn-big {
+        font-size: 2.2rem;
+        width: 24rem;
+        height: 6.2rem;
+        margin-top: 10rem;
+    }
+}
+
+@media (max-width: 815px) {
+    .product-list {
+        flex-wrap: wrap;
+        margin-top: 5rem;
+    }
+
+    .product-list li {
+        width: 47%;
+        flex-grow: 1;
+    }
+}
+@media (max-width: 660px) {
+    .benefit-txt {
+        padding: 0;
+    }
+
+    .benefit-txt p {
+        margin-top: 1.5rem;
+        word-break: keep-all;
+    }
+
+    .tab-menu {
+        margin-top: 5rem;
+    }
+    .tab-menu a {
+        font-size: 1.5rem;
+        word-break: keep-all;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tab-content {
+        margin-top: 3.6rem;
+    }
+
+    .brand {
+        margin-top: 17.8rem;
+    }
+
+    .brand-list {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .brand-list li.active {
+        width: 100%;
+        aspect-ratio: 1/1.0462;
+    }
+
+    .brand-list li {
+        width: 100%;
+        aspect-ratio: 1/0.2154;
+    }
+
+    .brand-list li > div {
+        width: 75%;
+    }
+
+    .brand-list li strong {
+        bottom: 4.6512vw;
+        left: 5.5814vw;
+        font-size: 2rem;
+    }
+
+    .brand-list li dl dt {
+        font-size: 2.8rem;
+    }
+
+    .brand-list li dl dd {
+        font-size: 2rem;
+    }
+
+    .btn-more {
+        min-width: 20rem;
+    }
+
+    .review-list li figure {
+        top: 37%;
+    }
+    .review-list li {
+        width: 100%;
+        aspect-ratio: 1/0.3692;
+    }
+}
