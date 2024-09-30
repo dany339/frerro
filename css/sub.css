@@ -287,6 +287,7 @@
     overflow: hidden;
     box-shadow: var(--shadow);
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .sust-list li::after {
@@ -305,6 +306,10 @@
 }
 .sust-list li:nth-child(3) {
     background-image: url(../img/sust-img3.jpg);
+}
+
+.sust-list li:hover {
+    transform: translateY(-10%);
 }
 
 .sust-list li strong::before {
