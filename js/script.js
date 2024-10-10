@@ -24,7 +24,6 @@ $(function () {
         const qualityItem = document.querySelector(".quality-item");
         const effortItem = document.querySelector(".effort-item");
         const visionSection = document.getElementById("vision");
-        const historySection = document.getElementById("history");
         const qualitySection = document.getElementById("quality");
         const effortSection = document.getElementById("effort");
 
@@ -80,41 +79,71 @@ $(function () {
         }
     });
 
-    // 대상을 변수에 저장
-    const $tabMenu = $(".tab-menu > li");
-    const $tabCon = $(".tab-con-item");
+    const tabMenu = $(".tab-menu > li");
 
-    console.log($tabMenu, $tabCon);
-
-    // // 처음 세팅
-    tabAction(2);
-
-    // 탭메뉴를 클릭했을 때
-    $tabMenu.on("click", function (e) {
-        // a의 기본 동작막기
+    tabMenu.on("click", function (e) {
         e.preventDefault();
-
-        // 선택한 탭메뉴의 인덱스 구하기
-        const tabIdx = $(this).index();
-        console.log(tabIdx);
-
-        tabAction(tabIdx);
+        tabMenu.removeClass("active");
+        $(this).addClass("active");
     });
 
-    // 공통의 동작을 함수로 정의
-    function tabAction(index) {
-        // 탭메뉴 활성화
-        $tabMenu.removeClass("on");
-        $tabMenu.eq(index).addClass("on");
+    const benefitSlider = new Swiper(".benefit-slider", {
+        // Optional parameters
+        direction: "horizontal", // vertical(세로) horizontal(가로)
+        loop: true /* false */,
+        autoplay: true /* autoplay: 자동으로 넘김 */,
+        speed: 1000, // 기본값 300 = 0.3초
+        effect: "slide" /* slide, fade, cube, flip(카드뒤집기), coverflow(좌,우가 중심으로 모아진)  */,
 
-        // 인덱스에 해당하는 $tabCon 보이기
-        $tabCon.hide();
-        $tabCon.eq(index).show();
+        // 캐러셀 만들기
+        slidesPerView: 3.7, // <- 보여질 슬라이더 갯수, 소수점도 가능
+        spaceBetween: 20, // 간격 20px
 
-        $("body").css({
-            backgroundColor: bgColor[index],
-        });
-    }
+        // Navigation arrows
+        navigation: {
+            nextEl: ".benefit-slider-wrap .btn-next",
+            prevEl: ".benefit-slider-wrap .btn-prev",
+        },
+
+        pagination: {
+            el: ".pagination",
+            type: "fraction",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: ".swiper-scrollbar",
+        },
+    });
+
+    const storySlider = new Swiper(".story-slider", {
+        // Optional parameters
+        direction: "horizontal", // vertical(세로) horizontal(가로)
+        loop: false /* false */,
+        autoplay: true /* autoplay: 자동으로 넘김 */,
+        speed: 1000, // 기본값 300 = 0.3초
+        effect: "slide" /* slide, fade, cube, flip(카드뒤집기), coverflow(좌,우가 중심으로 모아진)  */,
+
+        // 캐러셀 만들기
+        slidesPerView: 3, // <- 보여질 슬라이더 갯수, 소수점도 가능
+        spaceBetween: 20, // 간격 20px
+
+        // Navigation arrows
+        navigation: {
+            nextEl: ".story-slider-wrap .btn-next",
+            prevEl: ".story-slider-wrap .btn-prev",
+        },
+
+        pagination: {
+            el: ".pagination",
+            type: "fraction",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: ".swiper-scrollbar",
+        },
+    });
 });
 
 // BRAND

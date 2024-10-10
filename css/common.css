@@ -79,6 +79,53 @@ body {
     word-break: keep-all;
 }
 
+.pagination {
+    background: var(--black50);
+    color: var(--white100);
+    font-size: clamp(1.2rem, 0.8333vw, 1.6rem);
+    min-width: 7.1rem;
+    width: 4.6875vw;
+    aspect-ratio: 1/0.3846;
+    border-radius: 50px;
+    border: 1px solid var(--white60);
+
+    position: absolute;
+    bottom: -60px;
+    left: 50%; /* la */
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100px;
+    width: 8rem;
+    height: 8rem;
+    background: no-repeat 50% / 30%;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    z-index: 2;
+}
+
+.btn-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -100px;
+    width: 8rem;
+    height: 8rem;
+    background: no-repeat 50% / 30%;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    z-index: 2;
+}
+
 .inner {
     width: 132rem;
     width: 68.75vw;

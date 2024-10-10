@@ -5,9 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ferrero Rocher Official Website</title>
         <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
         <link rel="stylesheet" href="./css/sub.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </head>
     <body>
         <a href="#main" class="hidden">본문바로가기</a>
@@ -100,82 +102,91 @@
                 <!--.inner>h3.sec-title+ul.story-list>li*7>strong+h4+(figure>img)+p!-->
                 <div class="inner">
                     <h3 class="sec-title">페레로로쉐의 여정</h3>
-                    <div class="story-list">
-                        <div class="story-item">
-                            <div class="story-con">
-                                <strong>1982</strong>
-                                <h4>유럽에서의 시작</h4>
+
+                    <div class="story-slider-wrap">
+                        <button type="button" class="btn-prev"><i class="hidden">이전</i></button>
+                        <button type="button" class="btn-next"><i class="hidden">다음</i></button>
+
+                        <div class="swiper story-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="story-con">
+                                        <strong>1982</strong>
+                                        <h4>유럽에서의 시작</h4>
+                                    </div>
+                                    <figure><img src="./img/story-img1.jpg" alt="" /></figure>
+                                    <p>
+                                        페레로 로쉐는 유럽 여러 국가에 출시되었으며, 고급 재료와 독창적인 황금빛
+                                        포장으로 브랜드의 탁월함을 상징하는 아이콘이 되었습니다.
+                                    </p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="story-con">
+                                        <strong>1983</strong>
+                                        <h4>최초의 TV 광고</h4>
+                                    </div>
+                                    <figure><img src="./img/story-img2.jpg" alt="" /></figure>
+                                    <p>
+                                        첫 TV 광고는 곧 브랜드의 상징이 되었습니다. 이 광고는 새로운 초콜릿이 입소문을
+                                        타고 모든 이의 입에 오르내리는 순간을 생생하게 담아냈습니다.
+                                    </p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="story-con">
+                                        <strong>1988</strong>
+                                        <h4>미국에서의 출시</h4>
+                                    </div>
+                                    <figure><img src="./img/story-img3.jpg" alt="" /></figure>
+                                    <p>
+                                        페레로 로쉐는 미국 전역에 성공적으로 출시되었으며, 이후 몇 년 만에 프리미엄
+                                        초콜릿 카테고리를 선도하는 브랜드로 자리잡았습니다.
+                                    </p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="story-con">
+                                        <strong>1994</strong>
+                                        <h4>중국에서의 출시</h4>
+                                    </div>
+                                    <figure><img src="./img/story-img4.jpg" alt="" /></figure>
+                                    <p>
+                                        페레로 로쉐는 중국 시장에 진출하며 프리미엄 초콜릿의 선구자로서의 명성을
+                                        확립했습니다.
+                                    </p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="story-con">
+                                        <strong>1996</strong>
+                                        <h4>러시아에서 출시</h4>
+                                    </div>
+                                    <figure><img src="./img/story-img5.jpg" alt="" /></figure>
+                                    <p>
+                                        미국과 중국에서의 성공적인 확장 이후, 페레로 로쉐는 러시아에서도 처음으로
+                                        출시되었습니다.
+                                    </p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="story-con">
+                                        <strong>2014</strong>
+                                        <h4>그랜드 페레로 로쉐</h4>
+                                    </div>
+                                    <figure><img src="./img/story-img6.jpg" alt="" /></figure>
+                                    <p>
+                                        페레로 로쉐는 특별한 신제품을 선보였습니다. 엄선된 헤이즐넛과 바삭한 밀크 초콜릿
+                                        쉘은, 소중한 순간을 나누기에 완벽한 선물입니다.
+                                    </p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="story-con">
+                                        <strong>2021</strong>
+                                        <h4>새로운 초콜릿 바</h4>
+                                    </div>
+                                    <figure><img src="./img/story-img7.jpg" alt="" /></figure>
+                                    <p>
+                                        페레로 로쉐는 놀라운 즐거움을 선사하며, 풍부한 질감과 풍미가 어우러져 새로운
+                                        미식의 세계로 안내합니다.
+                                    </p>
+                                </div>
                             </div>
-                            <figure><img src="./img/story-img1.jpg" alt="" /></figure>
-                            <p>
-                                페레로 로쉐는 유럽 여러 국가에 출시되었으며, 고급 재료와 독창적인 황금빛 포장으로
-                                브랜드의 탁월함을 상징하는 아이콘이 되었습니다.
-                            </p>
-                        </div>
-                        <div class="story-item">
-                            <div class="story-con">
-                                <strong>1983</strong>
-                                <h4>최초의 TV 광고</h4>
-                            </div>
-                            <figure><img src="./img/story-img2.jpg" alt="" /></figure>
-                            <p>
-                                첫 TV 광고는 곧 브랜드의 상징이 되었습니다. 이 광고는 새로운 초콜릿이 입소문을 타고 모든
-                                이의 입에 오르내리는 순간을 생생하게 담아냈습니다.
-                            </p>
-                        </div>
-                        <div class="story-item">
-                            <div class="story-con">
-                                <strong>1988</strong>
-                                <h4>미국에서의 출시</h4>
-                            </div>
-                            <figure><img src="./img/story-img3.jpg" alt="" /></figure>
-                            <p>
-                                페레로 로쉐는 미국 전역에 성공적으로 출시되었으며, 이후 몇 년 만에 프리미엄 초콜릿
-                                카테고리를 선도하는 브랜드로 자리잡았습니다.
-                            </p>
-                        </div>
-                        <div class="story-item">
-                            <div class="story-con">
-                                <strong>1994</strong>
-                                <h4>중국에서의 출시</h4>
-                            </div>
-                            <figure><img src="./img/story-img4.jpg" alt="" /></figure>
-                            <p>
-                                페레로 로쉐는 중국 시장에 진출하며 프리미엄 초콜릿의 선구자로서의 명성을 확립했습니다.
-                            </p>
-                        </div>
-                        <div class="story-item">
-                            <div class="story-con">
-                                <strong>1996</strong>
-                                <h4>러시아에서 출시</h4>
-                            </div>
-                            <figure><img src="./img/story-img5.jpg" alt="" /></figure>
-                            <p>
-                                미국과 중국에서의 성공적인 확장 이후, 페레로 로쉐는 러시아에서도 처음으로
-                                출시되었습니다.
-                            </p>
-                        </div>
-                        <div class="story-item">
-                            <div class="story-con">
-                                <strong>2014</strong>
-                                <h4>그랜드 페레로 로쉐</h4>
-                            </div>
-                            <figure><img src="./img/story-img6.jpg" alt="" /></figure>
-                            <p>
-                                페레로 로쉐는 특별한 신제품을 선보였습니다. 엄선된 헤이즐넛과 바삭한 밀크 초콜릿 쉘은,
-                                소중한 순간을 나누기에 완벽한 선물입니다.
-                            </p>
-                        </div>
-                        <div class="story-item">
-                            <div class="story-con">
-                                <strong>2021</strong>
-                                <h4>새로운 초콜릿 바</h4>
-                            </div>
-                            <figure><img src="./img/story-img7.jpg" alt="" /></figure>
-                            <p>
-                                페레로 로쉐는 놀라운 즐거움을 선사하며, 풍부한 질감과 풍미가 어우러져 새로운 미식의
-                                세계로 안내합니다.
-                            </p>
                         </div>
                     </div>
                 </div>
