@@ -79,13 +79,32 @@ $(function () {
         }
     });
 
-    const tabMenu = $(".tab-menu > li");
+    const $tabMenu = $(".tab-menu > li");
+    const $tabCon = $(".tab-con-item");
 
-    tabMenu.on("click", function (e) {
+    // // 처음 세팅
+    tabAction(2);
+
+    $tabMenu.on("click", function (e) {
         e.preventDefault();
-        tabMenu.removeClass("active");
-        $(this).addClass("active");
+        // tabMenu.removeClass("on");
+        // $(this).addClass("on");
+        const tabIdx = $(this).index();
+        console.log(tabIdx);
+
+        tabAction(tabIdx);
     });
+
+    // 공통의 동작을 함수로 정의
+    function tabAction(index) {
+        // 탭 메뉴 활성화
+        $tabMenu.removeClass("on");
+        $tabMenu.eq(index).addClass("on");
+
+        // 인덱스에 해당하는 $tabCon 보이기
+        $tabCon.hide();
+        $tabCon.eq(index).show();
+    }
 
     const benefitSlider = new Swiper(".benefit-slider", {
         // Optional parameters

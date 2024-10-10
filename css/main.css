@@ -134,12 +134,12 @@
     height: 100%;
 }
 
-.tab-menu li.active {
+.tab-menu li.on {
     color: #fff;
     background: var(--main-color);
 }
 
-.tab-menu li.active:hover a {
+.tab-menu li.on:hover a {
     color: #fff;
 }
 
