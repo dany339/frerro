@@ -124,6 +124,9 @@ $(function () {
             prevEl: ".benefit-slider-wrap .btn-prev",
         },
 
+        observer: true,
+        observeParents: true,
+
         pagination: {
             el: ".pagination",
             type: "fraction",
@@ -162,6 +165,14 @@ $(function () {
         scrollbar: {
             el: ".swiper-scrollbar",
         },
+    });
+
+    // 대상을 변수에 저장
+    const $popup = $(".sust-con");
+    const $btnClose = $(".btn-close");
+
+    $(".sust-list li").on("click", function () {
+        $popup.addClass("active");
     });
 });
 
