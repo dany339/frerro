@@ -146,6 +146,8 @@ $(function () {
         speed: 1000, // 기본값 300 = 0.3초
         effect: "slide" /* slide, fade, cube, flip(카드뒤집기), coverflow(좌,우가 중심으로 모아진)  */,
 
+        mousewheel: true,
+
         // 캐러셀 만들기
         slidesPerView: 3, // <- 보여질 슬라이더 갯수, 소수점도 가능
         spaceBetween: 20, // 간격 20px
