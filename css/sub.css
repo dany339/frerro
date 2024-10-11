@@ -92,8 +92,13 @@
 }
 
 .story-slider-wrap {
-    height: 100%;
+    height: 46rem;
     position: relative;
+    margin-top: 8.1061%;
+}
+
+.swiper {
+    height: 100%;
 }
 
 .story-slider-wrap .btn-prev {
@@ -104,21 +109,10 @@
     background-image: url(../img/arrow-m-right.svg);
 }
 
-.swiper-wrapper {
-    display: flex;
-    /* margin-top: 10.7rem; */
-    margin-top: 5.5729vw;
-    height: 46rem;
-}
-
-.swiper-slide {
-    /* background: #ff5; */
-    /* border: 1px solid #000; */
-    /* width: 42.7rem; */
+.story-slider-wrap .swiper-slide {
     width: 32.3485%;
     min-width: 30.7rem;
     aspect-ratio: 1/0.2117;
-    flex-shrink: 0; /* 줄어들지 마. */
 }
 
 .story-con {
@@ -359,11 +353,11 @@
     color: var(--white100);
 }
 
-.sust-popup {
+.sust-slider-wrap {
     /* 이거 꼬옥 수습해주기~!!!!! 잊지말구!!!!! 오퍼시티 잘 조절해서 보시구 나중에 애니메이션 추가하시구 */
     opacity: 0;
 
-    background: #5f5;
+    /* background: #5f5; */
     position: absolute;
     z-index: 10;
     /* top: 25.2rem; */
@@ -374,22 +368,56 @@
     overflow: hidden;
     pointer-events: none;
     user-select: none;
-}
-
-.sust-popup li + li {
-    display: none;
-}
-
-.sust-popup li {
-    border: 1px solid #000;
-    background: no-repeat 0 0 / cover;
-    /* width: 132rem; */
     width: 68.75vw;
-    /* min-width: 74.4rem; */
     aspect-ratio: 1/0.4848;
+    /* border: 5px solid #f00; */
 }
 
-.sust-popup li::before {
+.sust-slider-wrap > button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    cursor: pointer;
+    pointer-events: initial;
+    border: none;
+    z-index: 11;
+}
+
+.sust-slider-wrap > button.btn-sust-prev {
+    background: url(../img/arrow-w-left.svg) no-repeat 50%;
+    left: 2%;
+}
+
+.sust-slider-wrap > button.btn-sust-next {
+    right: 2%;
+    background: url(../img/arrow-w-right.svg) no-repeat 50%;
+}
+
+.sust-slider-wrap > button.btn-close {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    transform: translateY(0);
+    width: 5rem;
+    aspect-ratio: 1/1;
+    background: url(../img/close-ico.svg) no-repeat 50% 50% / auto;
+    cursor: pointer;
+    pointer-events: visible;
+}
+
+.sust-slider-wrap.active {
+    opacity: 1;
+}
+
+.sust-slider {
+    /* border: 1px solid #000; */
+    background: no-repeat 0 0 / cover;
+}
+
+.sust-slider-wrap .swiper-slide::before {
     content: "";
     position: absolute;
     display: block;
@@ -400,14 +428,19 @@
     background: var(--black70);
 }
 
-.sust-popup li:nth-child(1) {
+.sust-pic1 {
+    height: 100%;
     background-image: url(../img/sust-img1.jpg);
+    background-size: cover;
+    /* border: 5px solid #0f0; */
 }
-.sust-popup li:nth-child(2) {
+.sust-pic2 {
     background-image: url(../img/sust-img2.jpg);
+    background-size: cover;
 }
-.sust-popup li:nth-child(3) {
+.sust-pic3 {
     background-image: url(../img/sust-img3.jpg);
+    background-size: cover;
 }
 
 .sust-con {
@@ -422,19 +455,6 @@
     align-items: center;
 }
 
-.sust-con::before {
-    content: "";
-    position: absolute;
-    top: 4%;
-    right: 2%;
-    display: block;
-    width: 5rem;
-    aspect-ratio: 1/1;
-    background: url(../img/close-ico.svg) no-repeat 50% 50% / auto;
-    cursor: pointer;
-    pointer-events: visible;
-}
-
 .sust-con strong {
     font-weight: 600;
     font-size: clamp(1.4rem, 1.5vw, 2.2rem);
@@ -442,7 +462,7 @@
     position: relative;
     display: block;
     /* padding: 12rem 0 0 0; */
-    padding-top: 9.0909%;
+    padding-top: 9%;
 }
 
 .sust-con strong::before {
@@ -493,6 +513,18 @@
 }
 
 @media (max-width: 1200px) {
+    .sust-slider-wrap {
+        top: 23vw;
+    }
+
+    .sust-slider-wrap > button.btn-sust-prev {
+        background: url(../img/arrow-w-left.svg) no-repeat 50% / 30%;
+    }
+
+    .sust-slider-wrap > button.btn-sust-next {
+        background: url(../img/arrow-w-right.svg) no-repeat 50% / 30%;
+    }
+
     .story-slider-wrap .btn-next {
         right: 10px;
         background: var(--black30) url(../img/arrow-w-right.svg) no-repeat 50% / 30%;
@@ -505,6 +537,11 @@
 }
 
 @media (max-width: 960px) {
+    .sust-slider-wrap {
+        top: 31vw;
+        border-radius: 0;
+    }
+
     .effort {
         padding-top: 15vw;
     }
@@ -541,9 +578,54 @@
     }
 
     .btn-more {
-        margin-top: 3.6rem;
+        margin-top: 6.4896vw;
         width: 23.2rem;
         font-size: 1.8rem;
+    }
+
+    .sust-slider-wrap {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .sust-list {
+        display: none;
+    }
+
+    /* .swiper-wrapper div {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    } */
+
+    .sust-con strong::before {
+        width: 6rem;
+        top: 0;
+    }
+
+    .sust-con strong {
+        /* margin-top: 13.4rem; */
+        margin-top: 10rem;
+        font-size: 1.6rem;
+        padding-top: 8%;
+    }
+
+    .sust-con dl dt {
+        margin-top: 4.2rem;
+        font-size: 3rem;
+    }
+
+    .sust-con dl dd {
+        margin-top: 5.7rem;
+        font-size: 2rem;
+    }
+
+    .sust-con br {
+        display: block;
+    }
+
+    .sust-con .btn-more {
+        margin-top: 10.5rem;
     }
 }
 
@@ -584,14 +666,12 @@
         display: none;
     }
 
-    .swiper-slide {
+    .story-slider {
         margin-top: 5rem;
     }
 
     .quality {
-        margin-top: 13rem;
         padding: 0;
-        background: #fff;
     }
 
     .quality-con {
@@ -607,43 +687,21 @@
         padding-top: 11.8rem;
     }
 
-    .sust-list {
-        display: none;
-    }
-
-    .sust-popup li {
-        width: 100vw;
-        height: 100vh;
-        border-radius: 0;
-    }
-
     .sust-con strong::before {
         width: 4rem;
     }
 
     .sust-con strong {
-        /* margin-top: 13.4rem; */
-        margin-top: 10rem;
         font-size: 1.4rem;
         padding-top: 16.0909%;
     }
 
     .sust-con dl dt {
-        margin-top: 4.2rem;
         font-size: 2.6rem;
     }
 
     .sust-con dl dd {
-        margin-top: 5.7rem;
         font-size: 1.8rem;
-    }
-
-    .sust-con br {
-        display: block;
-    }
-
-    .sust-con .btn-more {
-        margin-top: 10.5rem;
     }
 }
 

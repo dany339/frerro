@@ -167,12 +167,56 @@ $(function () {
         },
     });
 
-    // 대상을 변수에 저장
-    const $popup = $(".sust-con");
-    const $btnClose = $(".btn-close");
+    const sustSlider = new Swiper(".sust-slider", {
+        // Optional parameters
+        direction: "horizontal", // vertical(세로) horizontal(가로)
+        loop: true /* false */,
+        // autoplay: true /* autoplay: 자동으로 넘김 */,
+        speed: 1000, // 기본값 300 = 0.3초
+        effect: "slide" /* slide, fade, cube, flip(카드뒤집기), coverflow(좌,우가 중심으로 모아진)  */,
 
-    $(".sust-list li").on("click", function () {
+        // 캐러셀 만들기
+        slidesPerView: 1, // <- 보여질 슬라이더 갯수, 소수점도 가능
+
+        // Navigation arrows
+        navigation: {
+            nextEl: ".sust-slider-wrap .btn-sust-next",
+            prevEl: ".sust-slider-wrap .btn-sust-prev",
+        },
+    });
+
+    // 대상을 변수에 저장
+    const $popup = $(".sust-slider-wrap");
+    const $sustList = $(".sust-list > li");
+    const $btnClose = $(".btn-close");
+    // const $sustItem = $(".sust-item");
+
+    $sustList.on("click", function (e) {
+        // a의 기본 동작막기
+        e.preventDefault();
         $popup.addClass("active");
+
+        // 선택한 탭메뉴의 인덱스 구하기
+        const tabIdx = $(this).index();
+        console.log(tabIdx);
+
+        // sustAction(tabIdx);
+        sustSlider.slideTo(tabIdx);
+    });
+
+    // 공통의 동작을 함수로 정의
+    // function sustAction(index) {
+    //     // 탭메뉴 활성화
+    //     $sustList.removeClass("active");
+    //     $sustList.eq(index).addClass("active");
+
+    //     // 인덱스에 해당하는 $sustItem 보이기
+    //     $sustItem.hide();
+    //     $sustItem.eq(index).show();
+    // }
+
+    $btnClose.on("click", function () {
+        $popup.removeClass("active");
     });
 });
 
